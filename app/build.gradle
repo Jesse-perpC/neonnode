@@ -6,8 +6,8 @@ android {
         applicationId "nodejsmobile.nodeapp"
         minSdkVersion 24
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "2.0.0"
         ndkVersion "24.0.8215888"
         externalNativeBuild {
             cmake {

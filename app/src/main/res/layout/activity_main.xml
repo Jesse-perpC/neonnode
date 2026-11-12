@@ -1,16 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp">
+    android:background="@color/neon_bg">
 
-    <TextView
-        android:id="@+id/sample_text"
-        android:layout_width="wrap_content"
+    <View
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-180dp"
+        android:background="@drawable/neon_glow" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="NodeApp"
-        android:textSize="24sp" />
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="140dp"
+        android:paddingBottom="140dp">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEONNODE"
+            android:textColor="@color/neon_cyan"
+            android:textSize="54sp"
+            android:textStyle="bold"
+            android:letterSpacing="10"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="NODE.JS // ANDROID"
+            android:textColor="@color/neon_magenta"
+            android:textSize="16sp"
+            android:letterSpacing="6"
+            android:fontFamily="monospace" />
+
+        <Button
+            android:id="@+id/run_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="RUN NODE"
+            android:textColor="@color/neon_bg"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:background="@drawable/btn_neon"
+            android:paddingStart="36dp"
+            android:paddingEnd="36dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:minWidth="260dp"
+            android:minHeight="68dp" />
+
+        <TextView
+            android:id="@+id/status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="STATUS: AWAITING RUN"
+            android:textColor="@color/neon_amber"
+            android:textSize="16sp"
+            android:letterSpacing="2"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="v2.0.0"
+            android:textColor="#FF5A6B8C"
+            android:textSize="12sp"
+            android:fontFamily="monospace" />
+    </LinearLayout>
+
+</FrameLayout>
