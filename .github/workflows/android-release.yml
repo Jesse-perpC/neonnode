@@ -21,12 +21,14 @@ jobs:
           distribution: 'temurin'
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v2
-
-      - name: Set up NDK 24
-        uses: android-actions/setup-ndk@v1
+        uses: android-actions/setup-android@v4
         with:
-          ndk-version: '24.0.8215888'
+          packages: 'platform-tools'
+
+      - name: Install NDK 24
+        run: |
+          yes | sdkmanager --licenses > /dev/null 2>&1 || true
+          sdkmanager --install "ndk;24.0.8215888"
 
       - name: Set version from tag
         if: startsWith(github.ref, 'refs/tags/v')
